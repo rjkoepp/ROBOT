@@ -1,1 +1,2 @@
-
+praw==3.5.0
+praw-OAuth2Util
