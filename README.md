@@ -1,8 +1,7 @@
 # halp
 README.rst
-LICENSE
+
 setup.py
-requirements.txt
 sample/__init__.py
 sample/core.py
 sample/helpers.py
