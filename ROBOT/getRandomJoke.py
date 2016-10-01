@@ -9,5 +9,3 @@ def getRandomJoke():
             format(sentenceId=random.randint(1, numRows))
             )
     return str(c.fetchone()[0])
-
-print getRandomJoke()
