@@ -10,7 +10,7 @@ def get_transcription(x):
         count += 1
         if count == x:
             print latin_to_mathematical(i.title)
-            return (i.title, latin_to_mathematical(i.title))
+            return ('You should know ' + i.title[4:], latin_to_mathematical(i.title))
     return None
 
 def latin_to_mathematical(latinSentence):
