@@ -120,11 +120,11 @@ def initiateTypeRace():
                 #user message to chat to the typerace phrase
                 if message.strip().lower() == phrase.strip().lower():
                     time_elapsed = time.clock() - start
-                    send_message(s, user + " has won! with a time of "
-                                 + str(time_elapsed))
+                    send_message(s, user + " has won with a time of "
+                                 + str(time_elapsed) + " seconds")
                     #adjust leaderboards according to PHRASES
                     capped_phrase = phrase[:30] + "..."
-                    leaderboard[capped_phrase] = (user, time_elapsed)
+                    leaderboard[capped_phrase] = (user, str(time_elapsed) + " seconds")
                     race_ongoing = False
         
 def record_user_input():
