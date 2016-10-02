@@ -20,19 +20,19 @@ The bot promotes activity within the chat by raising challenges and contests on 
 
 Using the Bot
 -------------
-The user types !menu to see a privately-messaged list of available commands.
+The user types `!menu` to see a privately-messaged list of available commands.
 
-!typerace creates a typerace and posts the winner on a leaderboard.
+`!typerace` creates a typerace and posts the winner on a leaderboard.
 
-!leaderboard shows the leaderboard from !typerace.
+`!leaderboard` shows the leaderboard from !typerace.
 
-!jokes tells a top joke from Reddit.
+`!jokes` tells a top joke from Reddit.
 
-!riddle asks a top riddle from Reddit and checks the chat for an answer.
+`!riddle` asks a top riddle from Reddit and checks the chat for an answer.
 
-!news posts breaking news from Reddit.
+`!news` posts breaking news from Reddit.
 
-!emotepulse shows the hottest emote in a chat.
+`!emotepulse` shows the hottest emote in a chat.
 
 Notes
 -----
