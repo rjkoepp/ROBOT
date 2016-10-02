@@ -3,7 +3,7 @@
 </a>
 
 <a href="http://i.imgur.com/MhE8r0H.png">
-    <img src="http://i.imgur.com/MhE8r0H.png" align="right" height="500" />
+    <img src="http://i.imgur.com/MhE8r0H.png" align="right" height="480" />
 </a>
 
 ROBOT: Reddit Observation Bot On Twitch
