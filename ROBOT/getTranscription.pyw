@@ -14,6 +14,7 @@ def get_transcription(x):
     return None
 
 def latin_to_mathematical(latinSentence):
+    latinSentence = 'You should know ' + latinSentence[4:]
     mathematicalSentence = ''
     keywords = pd.read_csv('LatinToMathematical.csv')
 
