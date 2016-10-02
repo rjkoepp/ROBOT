@@ -1,5 +1,6 @@
 ROBOT
 =====
+Reddit Observation Bot On Twitch
 This is a multifunctional Twitch bot that has meaningful and engaging interactions with its users.
 
 Its mission is to recognize a chat's sentiment, entertain users within the chat accordingly, and promote both collaborative and competitive activity within the chat.
