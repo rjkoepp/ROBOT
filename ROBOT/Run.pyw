@@ -67,11 +67,11 @@ def print_max_freq():
         key_index = max(emote_frequencies.iterkeys(), key=lambda k: emote_frequencies[k])
         if(emote_frequencies[key_index] != 0):
             send_message(s, "The most popular emote: " + key_index + " with "
-                         + str(emote_frequencies[key_index]) + " occurencess in "
-                         + str(PRINT_FREQ_DELAY_IN_SECONDS/60) + " minutes")
+                         + str(emote_frequencies[key_index]) + " occurences in "
+                         + str(PRINT_FREQ_DELAY_IN_SECONDS/60) + " minute(s)")
         else:
             send_message(s, "No emote was entered in the past "
-                         + str(PRINT_FREQ_DELAY_IN_SECONDS/60) + " minutes")
+                         + str(PRINT_FREQ_DELAY_IN_SECONDS/60) + " minute(s)")
             
         emote_frequencies = {key:0 for key in emote_frequencies}
         #thread that calls the print_max_freq once the timer ends
@@ -125,6 +125,8 @@ def initiateTypeRace():
                     #adjust leaderboards according to PHRASES
                     capped_phrase = phrase[:30] + "..."
                     leaderboard[capped_phrase] = (user, str(time_elapsed) + " seconds")
+                    race_ongoing = False
+                elif message.strip().lower() == "quit":
                     race_ongoing = False
         
 def record_user_input():
