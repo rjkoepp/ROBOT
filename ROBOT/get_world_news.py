@@ -6,5 +6,5 @@ def get_world_news(x):
     posts = submissions.get_top(params={'t': 'hour'}, limit=x)
     news = []
     for i in posts:
-        news.append('[' + i.title + '](' + i.url + ')')
+        news.append(i.title + ": "  + i.url)
     return news
