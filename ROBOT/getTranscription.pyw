@@ -10,11 +10,10 @@ def get_transcription(x):
         count += 1
         if count == x:
             print latin_to_mathematical(i.title)
-            return ('You should know ' + i.title[4:], latin_to_mathematical(i.title))
+            return ('You should know ' + i.title[4:], 'You should know ' + latin_to_mathematical(i.title)[4:])
     return None
 
 def latin_to_mathematical(latinSentence):
-    latinSentence = 'You should know ' + latinSentence[4:]
     mathematicalSentence = ''
     keywords = pd.read_csv('LatinToMathematical.csv')
 
