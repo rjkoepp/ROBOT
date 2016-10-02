@@ -27,9 +27,9 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 IDENT = config.get('TWITCH', 'IDENT')
 
-MENU_DELAY_TIMER_IN_SECONDS = 180
+MENU_DELAY_TIMER_IN_SECONDS = 120
 PRINT_FREQ_DELAY_IN_SECONDS = 60
-PRINT_JOKE_DELAY_IN_SECONDS = 60
+PRINT_JOKE_DELAY_IN_SECONDS = 120
 NUMBER_OF_HOURLY_JOKES = 6
 
 #phrases that command the bot
