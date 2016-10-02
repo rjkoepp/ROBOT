@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 import praw
 
 def get_transcription(x):
@@ -10,12 +10,13 @@ def get_transcription(x):
         count += 1
         if count == x:
             print latin_to_mathematical(i.title)
-            return (i.title, latin_to_mathematical(i.title))
+            return ('You should know ' + i.title[4:], latin_to_mathematical(i.title))
     return None
 
 def latin_to_mathematical(latinSentence):
+    latinSentence = 'You should know ' + latinSentence[4:]
     mathematicalSentence = ''
-    keywords = pandas.read_csv('LatinToMathematical.csv')
+    keywords = pd.read_csv('LatinToMathematical.csv')
 
     latins = []
     for word in keywords['Latin']:

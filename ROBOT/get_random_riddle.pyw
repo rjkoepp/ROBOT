@@ -19,8 +19,6 @@ def get_random_riddle():
         Answer = cleanhtml( markdown.markdown(str(cc.fetchone()[0])))
         riddle = (Question, Answer)
         return riddle
-       # print riddle[0]
-        #print riddle[1]
     except:
         get_random_riddle()
 

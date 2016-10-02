@@ -1,7 +1,7 @@
 import praw
 
-def get_world_news(x):
-    r = praw.Reddit('jokegetter by /u/reffit_owner')
+def get_world_news(x = 1):
+    r = praw.Reddit('worldgetter by /u/reffit_owner')
     submissions = r.get_subreddit('worldnews')
     posts = submissions.get_top(params={'t': 'hour'}, limit=x)
     news = []
