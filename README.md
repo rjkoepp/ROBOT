@@ -1,3 +1,7 @@
+<a href="http://i.imgur.com/kEuEVYV.png">
+    <img src="http://i.imgur.com/kEuEVYV.png" align="left" height="500" />
+</a>
+
 ROBOT: Reddit Observation Bot On Twitch
 =====
 
