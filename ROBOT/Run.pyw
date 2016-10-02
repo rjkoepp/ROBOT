@@ -161,12 +161,12 @@ while True:
                 RIDDLE_ON = not RIDDLE_ON
                 if RIDDLE_ON:
                     RIDDLE = get_random_riddle()
-                    send_message(s, user + RIDDLE[0])
+                    send_message(s, RIDDLE[0])
                     
             if RIDDLE_ON:
                 #if message equals the riddle's answer
                 print RIDDLE
-                if message in RIDDLE[1]:
+                if RIDDLE[1].strip().lower() in message.strip().lower():
                     send_message(s, user + " got the correct answer!")
                     RIDDLE_ON = False
 
@@ -174,7 +174,8 @@ while True:
                 send_message(s, get_world_news()[0])
                 
             if message.strip() == MENU_COMMAND:
-                menu = TYPE_RACE_ACTIVATION_PHRASE \
+                menu = "List of commands " \
+                       + "\n" + TYPE_RACE_ACTIVATION_PHRASE \
                        + "\n" + JOKE_ACTIVATION_PHRASE \
                        + "\n" + "joke (only if !jokes)" \
                        + "\n" + EMOTE_ACTIVATION_PHRASE \
