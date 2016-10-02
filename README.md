@@ -33,3 +33,11 @@ The user types !menu to see a privately-messaged list of available commands.
 !news posts breaking news from Reddit.
 
 !emotepulse shows the hottest emote in a chat.
+
+Notes
+-----
+*Jokes and riddles are filtered for offensive content that does not abide by Twitch's Rules of Conduct.
+
+*News posts, however, are intentionally sourced from uncensored Reddit posts to promote freedom of information.
+
+*Typerace phrases are useful tips scraped from Reddit's YouShouldKnow subreddit, which allows users to learn as they type. The phrases are posted in Unicode Mathematical Alphanumeric Symbols and analyzed in Latin symbols to prevent copying and pasting.
