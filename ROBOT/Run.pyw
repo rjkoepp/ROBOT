@@ -27,9 +27,9 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 IDENT = config.get('TWITCH', 'IDENT')
 
-MENU_DELAY_TIMER_IN_SECONDS = 120
+MENU_DELAY_TIMER_IN_SECONDS = 180
 PRINT_FREQ_DELAY_IN_SECONDS = 60
-PRINT_JOKE_DELAY_IN_SECONDS = 120
+PRINT_JOKE_DELAY_IN_SECONDS = 60
 NUMBER_OF_HOURLY_JOKES = 6
 
 #phrases that command the bot
@@ -123,7 +123,7 @@ def initiateTypeRace():
                     send_message(s, user + " has won with a time of "
                                  + str(time_elapsed) + " seconds")
                     #adjust leaderboards according to PHRASES
-                    capped_phrase = phrase[:30] + "..."
+                    capped_phrase = phrase[:50] + "..."
                     leaderboard[capped_phrase] = (user, str(time_elapsed) + " seconds")
                     race_ongoing = False
                 elif message.strip().lower() == "quit":
