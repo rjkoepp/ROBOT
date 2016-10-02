@@ -6,7 +6,7 @@ import pandas
 def main():
     USER_AGENT = 'Linux:scraper (by Winson)'
     r = praw.Reddit(USER_AGENT)
-    conn = sqlite3.connect('Top_jokes.db')
+    conn = sqlite3.connect('jokes_and_riddles.db')
     c = conn.cursor()
     submissions = r.get_subreddit('Jokes')
     post = chain(submissions.get_top(params={'t': 'all'},limit = None),
