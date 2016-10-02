@@ -1,6 +1,7 @@
+from itertools import chain
 import praw
 import sqlite3
-
+import pandas
 
 def main():
     USER_AGENT = 'Linux:scraper (by Winson)'
@@ -8,13 +9,20 @@ def main():
     conn = sqlite3.connect('Top_jokes.db')
     c = conn.cursor()
     submissions = r.get_subreddit('Jokes')
-    post = submissions.get_top(params={'t': 'all'},limit = None)
-    print c.execute("SELECT * FROM Jokes_table")
+    post = chain(submissions.get_top(params={'t': 'all'},limit = None),
+            submissions.get_top(params={'t': 'year'},limit = None))
+    keywords = pandas.read_csv('censored_words.csv')
     for i in post:
-        jokeString = i.title.encode('ascii', 'ignore').lower() + "\n" + i.selftext.encode('ascii', 'ignore').lower()
-        jokeString = jokeString.decode('utf8')
-        print jokeString
-        c.execute("INSERT INTO Jokes_table (Joke) VALUES (?)", (jokeString,))
+        try:
+            jokeString = i.title.encode('ascii', 'ignore').lower() + "\n" + i.selftext.encode('ascii', 'ignore').lower()
+            jokeString = jokeString.decode('utf8')
+            for word in keywords['Words'].dropna():
+                if word in jokeString:
+                    raise ValueError('CENSORED WORD FOUND')
+            c.execute("INSERT INTO Jokes_table (Joke) VALUES (?)", (jokeString,))
+            print jokeString
+        except ValueError as err:
+            print err
 
     conn.commit()
 if __name__ == '__main__': main()
