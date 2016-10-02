@@ -1,6 +1,5 @@
-ROBOT
+ROBOT: Reddit Observation Bot On Twitch
 =====
-Reddit Observation Bot On Twitch
 
 This is a multifunctional Twitch bot that has meaningful and engaging interactions with its users.
 
